@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache
+.pytest_cache/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+# Raw CrisisMMD dataset
+data/raw/
+# Large trained ML models
+data/processed/distilbert_crisis_model/
+data/processed/ensemble_hybrid_crisis_model.joblib
+data/processed/final_random_forest_model.joblib
+data/processed/tuned_random_forest_model.joblib
+data/processed/final_random_forest_model.pkl
+# Generated processed datasets
+data/processed/crisis_mmd_cleaned.csv
+data/processed/crisis_mmd_master.csv
+data/processed/crisis_mmd_nlp.csv
+
+# Large generated feature datasets
+data/processed/X_train.npz
+data/processed/X_test.npz
+data/processed/tfidf_features.npz

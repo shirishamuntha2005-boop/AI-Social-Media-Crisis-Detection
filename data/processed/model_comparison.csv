@@ -1,0 +1,5 @@
+Model,Accuracy,Not_Informative_Recall,Not_Informative_F1
+Logistic Regression,0.8007,0.45,0.56
+Linear SVM,0.7886,0.53,0.59
+Random Forest,0.8029,0.47,0.57
+Balanced Logistic Regression,0.7783,0.72,0.65
