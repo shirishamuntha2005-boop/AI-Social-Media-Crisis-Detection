@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Crisis Detection</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🚨 <span>CrisisAI</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#detect">Detect Crisis</a>
+            <a href="#performance">Performance</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="nav-button" onclick="scrollToDetection()">
+            Analyze Post
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🤖 AI-Powered Early Warning System
+            </div>
+
+            <h1>
+                Detect Crisis Information
+                <span>Before It Spreads.</span>
+            </h1>
+
+            <p>
+                An NLP-powered system that analyzes social media posts
+                and identifies whether they contain useful crisis-related
+                information.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button
+                    class="primary-button"
+                    onclick="scrollToDetection()">
+                    🔍 Analyze a Post
+                </button>
+
+                <button
+                    class="secondary-button"
+                    onclick="scrollToPerformance()">
+                    📊 View Performance
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="card-header">
+                <span>LIVE AI ANALYSIS</span>
+                <span class="status-dot"></span>
+            </div>
+
+            <div class="analysis-icon">
+                🚨
+            </div>
+
+            <h3>Crisis Detection</h3>
+
+            <p>
+                Natural Language Processing + DistilBERT
+            </p>
+
+            <div class="mini-result">
+
+                <div>
+                    <small>Model Accuracy</small>
+                    <strong>82.72%</strong>
+                </div>
+
+                <div>
+                    <small>F1 Score</small>
+                    <strong>88.11%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <span>🎯</span>
+            <h2>82.72%</h2>
+            <p>Accuracy</p>
+        </div>
+
+        <div class="stat-card">
+            <span>📈</span>
+            <h2>88.11%</h2>
+            <p>F1 Score</p>
+        </div>
+
+        <div class="stat-card">
+            <span>🔎</span>
+            <h2>89.35%</h2>
+            <p>Recall</p>
+        </div>
+
+        <div class="stat-card">
+            <span>⚡</span>
+            <h2>86.90%</h2>
+            <p>Precision</p>
+        </div>
+
+    </section>
+
+
+    <!-- ================= DETECTION ================= -->
+
+    <section id="detect" class="detection-section">
+
+        <div class="section-heading">
+
+            <div class="badge">
+                🔍 AI ANALYSIS
+            </div>
+
+            <h2>
+                Analyze a Social Media Post
+            </h2>
+
+            <p>
+                Enter a social media post below and our AI model
+                will determine whether it contains useful crisis information.
+            </p>
+
+        </div>
+
+
+        <div class="detector">
+
+            <div class="example-buttons">
+
+                <button onclick="setExample('crisis')">
+                    🚨 Crisis Example
+                </button>
+
+                <button onclick="setExample('normal')">
+                    😊 Normal Example
+                </button>
+
+            </div>
+
+
+            <textarea
+                id="postInput"
+                placeholder="Example: A major earthquake has damaged buildings and many people need immediate help..."
+            ></textarea>
+
+
+            <div class="detector-footer">
+
+                <span id="characterCount">
+                    0 characters
+                </span>
+
+                <button
+                    class="analyze-button"
+                    onclick="analyzePost()">
+                    🔍 Analyze Post
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div id="result" class="result-card hidden">
+
+            <div class="result-icon">
+                🚨
+            </div>
+
+            <div class="result-content">
+
+                <p>AI PREDICTION</p>
+
+                <h2 id="prediction">
+                    INFORMATIVE
+                </h2>
+
+                <div class="confidence">
+
+                    <span>Confidence</span>
+
+                    <strong id="confidenceValue">
+                        89%
+                    </strong>
+
+                </div>
+
+                <div class="progress">
+                    <div id="progressBar"></div>
+                </div>
+
+                <p id="resultMessage">
+                    This post contains potentially useful crisis information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PERFORMANCE ================= -->
+
+    <section id="performance" class="performance-section">
+
+        <div class="section-heading">
+
+            <div class="badge">
+                📊 MODEL PERFORMANCE
+            </div>
+
+            <h2>
+                AI Model Performance
+            </h2>
+
+            <p>
+                Our DistilBERT model was evaluated on a held-out test dataset.
+            </p>
+
+        </div>
+
+
+        <div class="performance-grid">
+
+            <div class="performance-card">
+
+                <span>Accuracy</span>
+
+                <h3>82.72%</h3>
+
+                <p>
+                    Overall classification accuracy
+                </p>
+
+            </div>
+
+
+            <div class="performance-card">
+
+                <span>Precision</span>
+
+                <h3>86.90%</h3>
+
+                <p>
+                    Correct positive predictions
+                </p>
+
+            </div>
+
+
+            <div class="performance-card">
+
+                <span>Recall</span>
+
+                <h3>89.35%</h3>
+
+                <p>
+                    Informative posts detected
+                </p>
+
+            </div>
+
+
+            <div class="performance-card">
+
+                <span>F1 Score</span>
+
+                <h3>88.11%</h3>
+
+                <p>
+                    Balanced precision and recall
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONFUSION MATRIX -->
+
+        <div class="confusion-section">
+
+            <h3>Confusion Matrix</h3>
+
+            <div class="matrix">
+
+                <div></div>
+
+                <div class="matrix-label">
+                    Predicted Not Informative
+                </div>
+
+                <div class="matrix-label">
+                    Predicted Informative
+                </div>
+
+
+                <div class="matrix-label">
+                    Actual Not Informative
+                </div>
+
+                <div class="matrix-cell">
+                    601
+                </div>
+
+                <div class="matrix-cell">
+                    310
+                </div>
+
+
+                <div class="matrix-label">
+                    Actual Informative
+                </div>
+
+                <div class="matrix-cell">
+                    245
+                </div>
+
+                <div class="matrix-cell">
+                    2056
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about-section">
+
+        <div class="section-heading">
+
+            <div class="badge">
+                🧠 ABOUT THE PROJECT
+            </div>
+
+            <h2>
+                How CrisisAI Works
+            </h2>
+
+        </div>
+
+
+        <div class="pipeline">
+
+            <div class="pipeline-card">
+
+                <div>1</div>
+
+                <h3>Social Media Data</h3>
+
+                <p>
+                    Crisis-related social media posts
+                    are collected from the CrisisMMD dataset.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="pipeline-card">
+
+                <div>2</div>
+
+                <h3>NLP Processing</h3>
+
+                <p>
+                    Text is cleaned and processed
+                    before being provided to the model.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="pipeline-card">
+
+                <div>3</div>
+
+                <h3>DistilBERT</h3>
+
+                <p>
+                    The transformer model analyzes
+                    the meaning and context of the post.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="pipeline-card">
+
+                <div>4</div>
+
+                <h3>Prediction</h3>
+
+                <p>
+                    The system predicts whether
+                    the post is informative or not.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            🚨 <span>CrisisAI</span>
+        </div>
+
+        <p>
+            AI-Powered Social Media Crisis Detection
+        </p>
+
+        <p class="copyright">
+            © 2026 CrisisAI. Academic Project.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
