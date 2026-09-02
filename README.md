@@ -1,40 +1,34 @@
 # 🚨 AI-Powered Social Media Crisis Detection & Early Warning System
 
-## Real-Time Crisis Monitoring, Severity Analysis, Risk Assessment & Early Warning Using NLP and Transformer Models
+## 🌐 Live Dashboard
 
-An AI-powered system for detecting and analyzing crisis-related information from social media posts using **Natural Language Processing (NLP)** and **Transformer-based Deep Learning models**.
+### 🔴 [Open Live Crisis Detection Dashboard](YOUR_STREAMLIT_URL)
 
-The system classifies social media posts as **Informative** or **Not Informative**, estimates crisis severity, generates priority alerts, groups related crisis posts into events, calculates crisis risk, analyzes trends, and provides an interactive **real-time Streamlit dashboard** for early warning and decision support.
+> **Interactive Demo:** Test social media posts using the trained RoBERTa model and view crisis classification, severity, alert priority, risk assessment, crisis event grouping, trend analysis, and early-warning results.
 
 ---
 
 ## 📌 Project Overview
 
-During natural disasters and emergency situations, social media platforms generate large volumes of posts containing potentially valuable crisis information.
+### Real-Time Crisis Monitoring, Severity Analysis, Risk Assessment & Early Warning Using NLP and Transformer Models
 
-However, manually monitoring thousands of posts is difficult because:
+The **AI-Powered Social Media Crisis Detection & Early Warning System** is an intelligent system designed to automatically detect and analyze crisis-related information from social media posts using **Natural Language Processing (NLP)**, **Machine Learning**, and **Transformer-based Deep Learning models**.
 
-- Social media data is generated continuously.
-- Crisis-related information is mixed with irrelevant content.
-- Emergency information can spread very quickly.
-- Manual analysis is time-consuming.
-- Different posts may describe the same crisis event.
-- Emergency responders need timely alerts and risk information.
+The system classifies social media posts into:
 
-This project addresses these challenges by developing an **AI-powered social media crisis detection and early warning system**.
+- **Informative**
+- **Not Informative**
 
-The proposed system combines:
+For informative crisis-related posts, the system further performs:
 
-- Natural Language Processing
-- Machine Learning
-- Transformer-based NLP
-- Real-time processing
 - Crisis severity detection
-- Alert prioritization
+- Alert priority generation
 - Crisis event grouping
 - Risk assessment
 - Trend analysis
-- Early warning visualization
+- Early warning generation
+
+The complete system is integrated into an interactive **Streamlit dashboard** that allows users to monitor crisis situations and test individual social media posts.
 
 ---
 
@@ -44,74 +38,84 @@ The main objectives of this project are:
 
 1. Detect crisis-related information from social media posts.
 2. Classify posts as informative or not informative.
-3. Use NLP techniques to clean and preprocess social media text.
-4. Compare traditional machine learning models with transformer models.
-5. Implement a RoBERTa-based crisis classification system.
-6. Estimate the severity of detected crisis information.
-7. Generate automated crisis alerts.
-8. Group related posts into crisis events.
-9. Calculate an overall crisis risk score.
-10. Analyze crisis trends over time.
-11. Provide early warning information through an interactive dashboard.
-12. Allow users to test individual social media posts using the trained model.
+3. Clean and preprocess social media text using NLP techniques.
+4. Extract meaningful textual features.
+5. Compare traditional machine learning models with transformer-based models.
+6. Implement a RoBERTa-based crisis information classification system.
+7. Detect the severity of crisis-related posts.
+8. Generate automated crisis alerts.
+9. Prioritize alerts according to crisis severity.
+10. Group related crisis posts into events.
+11. Calculate an overall crisis risk score.
+12. Analyze crisis trends.
+13. Generate early-warning information.
+14. Provide an interactive real-time crisis monitoring dashboard.
+15. Allow users to manually test new social media posts using the trained RoBERTa model.
 
 ---
 
-# 🧠 System Architecture
+# 🚨 Problem Statement
+
+During natural disasters and emergency situations, social media platforms generate a large amount of information in real time.
+
+Examples include:
+
+- Floods
+- Earthquakes
+- Hurricanes
+- Wildfires
+- Infrastructure damage
+- Evacuations
+- Rescue operations
+- Emergency situations
+
+However, identifying useful crisis information manually is difficult because:
+
+- Social media data is generated continuously.
+- Large numbers of posts are produced during disasters.
+- Crisis information is mixed with irrelevant content.
+- Emergency information can spread rapidly.
+- Manual monitoring is time-consuming.
+- Multiple posts may describe the same crisis event.
+- Emergency response teams need timely and prioritized information.
+
+This project addresses these challenges using an automated AI-based pipeline for **crisis information detection, severity assessment, alert generation, event grouping, risk analysis, and early warning**.
+
+---
+
+# 💡 Proposed Solution
+
+The proposed system combines NLP, Machine Learning, Transformer models, and real-time analytics into a unified crisis detection pipeline.
+
+The system performs the following operations:
 
 ```text
-                 SOCIAL MEDIA POSTS
-                         │
-                         ▼
-              ┌─────────────────────┐
-              │ Data Collection     │
-              └──────────┬──────────┘
-                         │
-                         ▼
-              ┌─────────────────────┐
-              │ Text Cleaning &    │
-              │ NLP Preprocessing  │
-              └──────────┬──────────┘
-                         │
-                         ▼
-              ┌─────────────────────┐
-              │ RoBERTa Crisis     │
-              │ Classification     │
-              └──────────┬──────────┘
-                         │
-                ┌────────┴────────┐
-                ▼                 ▼
-          Informative       Not Informative
-                │
-                ▼
-       ┌─────────────────────┐
-       │ Severity Detection  │
-       └──────────┬──────────┘
-                  │
-                  ▼
-       ┌─────────────────────┐
-       │ Alert Generation    │
-       └──────────┬──────────┘
-                  │
-                  ▼
-       ┌─────────────────────┐
-       │ Crisis Event        │
-       │ Grouping            │
-       └──────────┬──────────┘
-                  │
-                  ▼
-       ┌─────────────────────┐
-       │ Risk Assessment     │
-       └──────────┬──────────┘
-                  │
-                  ▼
-       ┌─────────────────────┐
-       │ Trend Analysis      │
-       └──────────┬──────────┘
-                  │
-                  ▼
-       ┌─────────────────────┐
-       │ Early Warning       │
-       │ Dashboard           │
-       └─────────────────────┘
+Social Media Posts
+        ↓
+Data Collection
+        ↓
+Text Cleaning
+        ↓
+NLP Preprocessing
+        ↓
+RoBERTa Classification
+        ↓
+Informative / Not Informative
+        ↓
+Severity Detection
+        ↓
+Alert Generation
+        ↓
+Crisis Event Grouping
+        ↓
+Risk Assessment
+        ↓
+Trend Analysis
+        ↓
+Early Warning
+        ↓
+Streamlit Dashboard
 
+
+           
+      
