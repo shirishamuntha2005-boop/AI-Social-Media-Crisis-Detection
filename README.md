@@ -1,364 +1,117 @@
-\# 🚨 AI Social Media Crisis Detection \& Early Warning System
+# 🚨 AI-Powered Social Media Crisis Detection & Early Warning System
 
+## Real-Time Crisis Monitoring, Severity Analysis, Risk Assessment & Early Warning Using NLP and Transformer Models
 
+An AI-powered system for detecting and analyzing crisis-related information from social media posts using **Natural Language Processing (NLP)** and **Transformer-based Deep Learning models**.
 
-An AI-powered Natural Language Processing (NLP) system that analyzes social media text and identifies whether a post contains informative crisis-related information.
+The system classifies social media posts as **Informative** or **Not Informative**, estimates crisis severity, generates priority alerts, groups related crisis posts into events, calculates crisis risk, analyzes trends, and provides an interactive **real-time Streamlit dashboard** for early warning and decision support.
 
+---
 
+## 📌 Project Overview
 
-\## 📌 Project Overview
+During natural disasters and emergency situations, social media platforms generate large volumes of posts containing potentially valuable crisis information.
 
+However, manually monitoring thousands of posts is difficult because:
 
+- Social media data is generated continuously.
+- Crisis-related information is mixed with irrelevant content.
+- Emergency information can spread very quickly.
+- Manual analysis is time-consuming.
+- Different posts may describe the same crisis event.
+- Emergency responders need timely alerts and risk information.
 
-During natural disasters and emergency situations, social media platforms contain large amounts of real-time information.
+This project addresses these challenges by developing an **AI-powered social media crisis detection and early warning system**.
 
+The proposed system combines:
 
+- Natural Language Processing
+- Machine Learning
+- Transformer-based NLP
+- Real-time processing
+- Crisis severity detection
+- Alert prioritization
+- Crisis event grouping
+- Risk assessment
+- Trend analysis
+- Early warning visualization
 
-However, not every social media post provides useful crisis-related information.
+---
 
+# 🎯 Objectives
 
+The main objectives of this project are:
 
-This project uses Natural Language Processing and Machine Learning to automatically classify social media posts into:
+1. Detect crisis-related information from social media posts.
+2. Classify posts as informative or not informative.
+3. Use NLP techniques to clean and preprocess social media text.
+4. Compare traditional machine learning models with transformer models.
+5. Implement a RoBERTa-based crisis classification system.
+6. Estimate the severity of detected crisis information.
+7. Generate automated crisis alerts.
+8. Group related posts into crisis events.
+9. Calculate an overall crisis risk score.
+10. Analyze crisis trends over time.
+11. Provide early warning information through an interactive dashboard.
+12. Allow users to test individual social media posts using the trained model.
 
+---
 
-
-\- INFORMATIVE
-
-\- NOT INFORMATIVE
-
-
-
-The project includes traditional Machine Learning models as well as a fine-tuned DistilBERT model and a Streamlit web application for real-time prediction.
-
-
-
-\## 🎯 Objectives
-
-
-
-\- Detect informative crisis-related social media posts.
-
-\- Classify posts automatically using NLP.
-
-\- Compare traditional Machine Learning approaches with Transformer-based models.
-
-\- Provide a simple web interface for users.
-
-\- Display prediction results and confidence scores.
-
-\- Build a foundation for an AI-powered crisis early warning system.
-
-
-
-\## 📊 Dataset
-
-
-
-The project uses the CrisisMMD v2.0 dataset.
-
-
-
-CrisisMMD is a multimodal disaster-related social media dataset containing information from crisis events.
-
-
-
-The project focuses on the textual information for NLP-based crisis classification.
-
-
-
-\### Dataset Processing
-
-
-
-The data processing pipeline includes:
-
-
-
-1\. Dataset collection
-
-2\. Dataset combination
-
-3\. Data cleaning
-
-4\. Text preprocessing
-
-5\. Exploratory Data Analysis
-
-6\. TF-IDF feature extraction
-
-7\. Machine Learning model training
-
-8\. DistilBERT fine-tuning
-
-9\. Model evaluation
-
-10\. Streamlit deployment
-
-
-
-\## 🤖 Models Used
-
-
-
-\### Traditional Machine Learning
-
-
-
-The project experimented with:
-
-
-
-\- Logistic Regression
-
-\- Random Forest
-
-\- TF-IDF Word Unigrams
-
-\- TF-IDF Word Bigrams
-
-\- TF-IDF Word Trigrams
-
-\- TF-IDF Character Features
-
-
-
-\### Transformer Model
-
-
-
-A DistilBERT-based text classification model was fine-tuned for crisis-related text classification.
-
-
-
-The trained model is stored locally in:
-
-
-
-`data/processed/distilbert\_crisis\_model`
-
-
-
-\## 🧠 DistilBERT Model Files
-
-
-
-The trained model directory contains:
-
-
-
-\- `config.json`
-
-\- `model.safetensors`
-
-\- `tokenizer.json`
-
-\- `tokenizer\_config.json`
-
-\- `distilbert\_metrics.json`
-
-\- `training\_history.json`
-
-
-
-\## 📈 Model Results
-
-
-
-The traditional Machine Learning experiments produced the following results:
-
-
-
-| Model | Accuracy | F1 Score |
-
-|---|---:|---:|
-
-| Logistic Regression - Word Bigram | 78.83% | 79.16% |
-
-| Logistic Regression - Word Trigram | 79.17% | 79.41% |
-
-| Logistic Regression - Character TF-IDF | 78.99% | 79.52% |
-
-| Random Forest - 200 Trees | 79.45% | 79.45% |
-
-| Random Forest - 300 Trees | 79.51% | 79.51% |
-
-| Random Forest - MaxFeaturesLog2 | 80.20% | 80.15% |
-
-| Random Forest - No Balance | 80.23% | 78.67% |
-
-
-
-\### Example Prediction
-
-
-
-Example input:
-
-
-
-"Flood water has entered several houses and people need immediate rescue."
-
-
-
-Example output from the Streamlit application:
-
-
-
-\- Prediction: \*\*INFORMATIVE\*\*
-
-\- Class ID: \*\*1\*\*
-
-\- Confidence: \*\*99.69%\*\*
-
-
-
-> Note: Prediction confidence is specific to an individual input and should not be interpreted as the overall model accuracy.
-
-
-
-\## 🖥️ Streamlit Application
-
-
-
-The project includes a Streamlit web application.
-
-
-
-The application allows users to:
-
-
-
-1\. Enter social media text.
-
-2\. Select example crisis-related posts.
-
-3\. Analyze the text.
-
-4\. Receive a classification.
-
-5\. View the confidence score.
-
-6\. View prediction details.
-
-
-
-\## 🛠️ Technologies Used
-
-
-
-\### Programming Language
-
-
-
-\- Python
-
-
-
-\### Machine Learning \& NLP
-
-
-
-\- PyTorch
-
-\- Hugging Face Transformers
-
-\- DistilBERT
-
-\- Scikit-learn
-
-\- TF-IDF
-
-\- Pandas
-
-\- NumPy
-
-
-
-\### Visualization \& Application
-
-
-
-\- Streamlit
-
-\- Matplotlib
-
-\- Seaborn
-
-\- Plotly
-
-
-
-\### Development Tools
-
-
-
-\- VS Code
-
-\- Jupyter Notebook
-
-\- Git
-
-\- GitHub
-
-
-
-\## 📁 Project Structure
-
-
+# 🧠 System Architecture
 
 ```text
-
-AI-Social-Media-Crisis-Detection/
-
-│
-
-├── app.py
-
-├── README.md
-
-├── .gitignore
-
-│
-
-├── data/
-
-│   ├── raw/
-
-│   └── processed/
-
-│       ├── crisis\_mmd\_master.csv
-
-│       ├── crisis\_mmd\_cleaned.csv
-
-│       ├── crisis\_mmd\_nlp.csv
-
-│       └── distilbert\_crisis\_model/
-
-│
-
-├── notebooks/
-
-│
-
-├── outputs/
-
-│
-
-├── src/
-
-│   ├── combine\_datasets.py
-
-│   ├── clean\_dataset.py
-
-│   ├── eda.py
-
-│   ├── nlp\_preprocessing.py
-
-│   ├── tfidf\_features.py
-
-│   └── train\_distilbert.py
-
-│
-
-└── venv/
+                 SOCIAL MEDIA POSTS
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │ Data Collection     │
+              └──────────┬──────────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │ Text Cleaning &    │
+              │ NLP Preprocessing  │
+              └──────────┬──────────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │ RoBERTa Crisis     │
+              │ Classification     │
+              └──────────┬──────────┘
+                         │
+                ┌────────┴────────┐
+                ▼                 ▼
+          Informative       Not Informative
+                │
+                ▼
+       ┌─────────────────────┐
+       │ Severity Detection  │
+       └──────────┬──────────┘
+                  │
+                  ▼
+       ┌─────────────────────┐
+       │ Alert Generation    │
+       └──────────┬──────────┘
+                  │
+                  ▼
+       ┌─────────────────────┐
+       │ Crisis Event        │
+       │ Grouping            │
+       └──────────┬──────────┘
+                  │
+                  ▼
+       ┌─────────────────────┐
+       │ Risk Assessment     │
+       └──────────┬──────────┘
+                  │
+                  ▼
+       ┌─────────────────────┐
+       │ Trend Analysis      │
+       └──────────┬──────────┘
+                  │
+                  ▼
+       ┌─────────────────────┐
+       │ Early Warning       │
+       │ Dashboard           │
+       └─────────────────────┘
 
