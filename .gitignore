@@ -1,51 +1,83 @@
+# ============================================================
 # Python
+# ============================================================
+
 __pycache__/
 *.py[cod]
 *.pyo
+*.pyd
 
-# Virtual environment
+# ============================================================
+# Virtual Environment
+# ============================================================
+
 venv/
+.env
 .venv/
-env/
 
+# ============================================================
 # Jupyter
+# ============================================================
+
 .ipynb_checkpoints/
 
-# VS Code
+# ============================================================
+# IDE
+# ============================================================
+
 .vscode/
+.idea/
 
-# OS files
-.DS_Store
-Thumbs.db
+# ============================================================
+# Large Datasets
+# ============================================================
 
-# Python cache
-.pytest_cache/
+data/raw/
+data/processed/*.csv
+data/processed/*.npz
+data/processed/*.tsv
 
-# Streamlit
-.streamlit/secrets.toml
+# ============================================================
+# Trained Models
+# ============================================================
 
+data/processed/distilbert_crisis_model/
+data/processed/*.joblib
+data/processed/*.pkl
+
+outputs/roberta_crisis_model/
+outputs/
+
+# ============================================================
+# Runtime Generated Files
+# ============================================================
+
+realtime/*.csv
+realtime/__pycache__/
+
+# ============================================================
+# Temporary / Backup App Files
+# ============================================================
+
+app_backup.py
+app_backup_step11.py
+app_backup_step12.py
+app_backup_working.py
+app_step10_backup.py
+
+# ============================================================
 # Logs
+# ============================================================
+
 *.log
 
-# Temporary files
-*.tmp
-*.temp
+# ============================================================
+# OS Files
+# ============================================================
 
-# Raw CrisisMMD dataset
-data/raw/
+.DS_Store
+Thumbs.db
+# Backup files
+*_backup.py
 
-# Large trained ML models
-data/processed/distilbert_crisis_model/
-data/processed/ensemble_hybrid_crisis_model.joblib
-data/processed/final_random_forest_model.joblib
-data/processed/tuned_random_forest_model.joblib
-data/processed/final_random_forest_model.pkl
-
-# Generated processed datasets
-data/processed/crisis_mmd_cleaned.csv
-data/processed/crisis_mmd_nlp.csv
-
-# Large generated feature datasets
-data/processed/X_train.npz
-data/processed/X_test.npz
-data/processed/tfidf_features.npz
+realtime/alert_generator_backup2.py
